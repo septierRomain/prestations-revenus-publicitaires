@@ -7,9 +7,9 @@ import Redo from '../App/Redo'
 import GreyArrow from '../../Assets/grey arrow.svg'
 import Check from '../../Assets/check.svg'
 import Arrow from '../../Assets/arrow.svg'
-import Prestations from '../../Assets/categories/prestation france.png'
+import Prestations from '../../Assets/categories/prestation exo.png'
 
-const FranceUnsubmit = () => {
+const ForeignUnsubmit = () => {
   let history = useHistory()
   return ( 
     <div className='wrap'>
@@ -23,17 +23,18 @@ const FranceUnsubmit = () => {
 
       <div className="breadcrumbs">
         <p><img src={Check} alt="fleche grise"/>Le preneur n'est pas assujetti à la TVA</p>
-        <p><img src={Check} alt="fleche grise"/>Le preneur se situe en France ou dans un pays de l'Union Européenne</p>
+        <p><img src={Check} alt="fleche grise"/>Le preneur se situe dans un pays en dehors de l'Union Européenne</p>
       </div>
 
       <h4>La procédure :</h4>
-      <ul><img src={Arrow} alt="Fleche verte" style={{transform: 'rotate(180deg)'}} />Appliquez le taux de TVA français</ul>
-      <ul><img src={Arrow} alt="Fleche verte" style={{transform: 'rotate(180deg)'}} />Déclarez votre TVA en France</ul>
+      <ul><img src={Arrow} alt="Fleche verte" style={{transform: 'rotate(180deg)'}} />Opération non imposable en France - Opération n'entrant pas dans le champ d'application de la TVA</ul>
+      <ul><img src={Arrow} alt="Fleche verte" style={{transform: 'rotate(180deg)'}} />La TVA ne doit donc pas être appliquée - Facture hors taxes</ul>
 
       <hr />
         <div className='categorie' >
           <h4>Si vous êtes client Dougs : </h4>
-          <ul><img src={Arrow} alt="Fleche verte" style={{transform: 'rotate(180deg)'}} />Sélectionnez la catégorie "Prestations de services à 20%"</ul>
+          <ul><img src={Arrow} alt="Fleche verte" style={{transform: 'rotate(180deg)'}} />Sélectionnez la catégorie "Prestations de services exonérées"</ul>
+          <ul><img src={Arrow} alt="Fleche verte" style={{transform: 'rotate(180deg)'}} />Indiquez la raison "vente hors Union Européenne”</ul>
           <img src={Prestations} alt="Categorie UE" />
         </div>
 
@@ -46,4 +47,4 @@ const FranceUnsubmit = () => {
 );
 }
 
-export default FranceUnsubmit;
+export default ForeignUnsubmit;

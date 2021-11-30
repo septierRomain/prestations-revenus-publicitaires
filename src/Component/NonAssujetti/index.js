@@ -6,7 +6,7 @@ import Banner from '../App/Banner';
 import GreyArrow from '../../Assets/grey arrow.svg'
 import Check from '../../Assets/check.svg'
 
-const Assujetti = () => {
+const NonAssujetti = () => {
   let history = useHistory()
   return ( 
     <div className="wrap">
@@ -18,15 +18,14 @@ const Assujetti = () => {
         </button>
 
         <div className="breadcrumbs">
-          <p><img src={Check} alt="fleche grise"/>Le preneur est assujetti à la TVA</p>
+          <p><img src={Check} alt="fleche grise"/>Le preneur n'est pas assujetti à la TVA</p>
         </div>
 
-      <h4>Votre client est il établi ?</h4>
+      <h4>Votre client est il établi en France ou dans un autre pays de l'Union Européenne ?</h4>
 
         <div className="select_container">
-          <Link to='/France'><button className='select'>En France</button></Link>
-          <Link to='/hors_France'><button className='select'>En Union Européenne <br /> <span id="subtitle">(Hors France)</span></button></Link>
-          <Link to='/hors_UE'><button className='select'>Hors Union Européenne</button></Link>
+          <Link to='/non_assujetti_UE'><button className='select'>Oui</button></Link>
+          <Link to='/non_assujetti_hors_UE'><button className='select'>Non</button></Link>
         </div>
 
       </div>
@@ -34,4 +33,4 @@ const Assujetti = () => {
 );
 }
 
-export default Assujetti;
+export default NonAssujetti;

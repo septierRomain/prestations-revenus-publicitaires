@@ -5,6 +5,8 @@ import Assujetti from './Component/Assujetti';
 import Foreign from './Component/Assujetti/Foreign';
 import France from './Component/Assujetti/France';
 import UE from './Component/Assujetti/UE';
+import NonAssujetti from './Component/NonAssujetti';
+import ForeignUnsubmit from './Component/NonAssujetti/ForeignUnsubmit';
 import FranceUnsubmit from './Component/NonAssujetti/FranceUnsubmit';
 
 function App() {
@@ -22,7 +24,9 @@ function App() {
           <Route exact path='/hors_France' component={UE} />
 
           {/* Routes pour les non assujetti */}
-          <Route exact path='/non_assujetti' component={FranceUnsubmit} />
+          <Route exact path='/non_assujetti' component={NonAssujetti} />
+          <Route exact path='/non_assujetti_UE' component={FranceUnsubmit} />
+          <Route exact path='/non_assujetti_hors_UE' component={ForeignUnsubmit} />
 
         </Switch>
         </BrowserRouter>
